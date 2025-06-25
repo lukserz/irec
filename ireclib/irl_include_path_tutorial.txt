@@ -1,0 +1,18 @@
+/*
+  You are getting this error because you have added the ireclib folder to your
+  compiler's include search path.  
+
+  You should *NOT* add the ireclib folder itself to your compiler's include path. 
+  Doing so will cause the build to fail because of name collisions (such as 
+  ireclib/string.h and string.h from the standard library). Instead you should 
+  add the folder that contains the ireclib folder to your include search path 
+  and then use include statements of the form #include <ireclib/queue.h> or
+
+  XCode:
+  	The XCode IDE often puts all folders that it knows about into 
+	the compiler search path.  So if you are using XCode then either 
+	don't drag the whole ireclib folder into the project or alternatively 
+	modify your XCode project settings to not auto-add all folders to 
+	the include path.  Instead just make sure that the ireclib folder is 
+	itself inside a folder in your include path.  
+*/

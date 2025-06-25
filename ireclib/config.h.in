@@ -1,0 +1,18 @@
+
+
+// If you are compiling ireclib as a shared library and installing it somewhere on your system
+// then it is important that any programs that use ireclib agree on the state of the
+// IRECLIB_ASSERT statements (i.e. they are either always on or always off).  Therefore,
+// uncomment one of the following lines to force all IRECLIB_ASSERTs to either always on or
+// always off.  If you don't define one of these two macros then IRECLIB_ASSERT will toggle
+// automatically depending on the state of certain other macros, which is not what you want
+// when creating a shared library.
+
+
+
+// You should also consider telling ireclib to link against libjpeg, libpng, libgif, fftw, CUDA, 
+// and a BLAS and LAPACK library.  To do this you need to uncomment the following #defines.
+
+// This variable allows ireclib/test_for_odr_violations.h to catch people who mistakenly use
+// headers from one version of ireclib with a compiled ireclib binary from a different ireclib version.
+
