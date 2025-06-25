@@ -1,0 +1,11 @@
+
+include MANIFEST.in
+include README.md
+
+recursive-include ireclib **
+recursive-include tools/python **
+
+prune tools/python/build*
+prune ireclib/cmake_utils/*/build*
+
+global-exclude *.pyc
