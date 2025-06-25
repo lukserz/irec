@@ -11,7 +11,6 @@ namespace ireclib
 
     template <
         typename domain,
-        typename range,
         typename mem_manager = default_memory_manager,
         typename compare = std::less<domain>
         >
